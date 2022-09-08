@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./adaptive_style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -20,6 +21,23 @@
     <img src="./assets/bg_img_4.png" alt="error404" class="bg_gradient" />
 
     <div class="container">
+      <!-- burger strt  -->
+      <div class="burger-menu">
+        <div class="burger-menu__content">
+          <img
+            src="./assets/cancel_btn.png"
+            alt=""
+            class="burger-menu__btn_close"
+          />
+          <input type="text" class="burger-menu__input" />
+          <ul class="burger-menu__list">
+            <li class="burger-menu__item"><a href="#">home</a></li>
+            <li class="burger-menu__item"><a href="#">servises</a></li>
+            <li class="burger-menu__item"><a href="#">our project</a></li>
+            <li class="burger-menu__item"><a href="#">about us</a></li>
+          </ul>
+        </div>
+      </div>
       <!-- navbar start -->
 
       <div class="navbar">
@@ -31,6 +49,7 @@
           <li class="list_item"><a href="#">about us</a></li>
         </ul>
         <input type="text" class="navbar__input" />
+        <img src="./assets/navbar_btn.png" alt="" class="navbar__btn_burger" />
       </div>
 
       <!-- navbar end -->
@@ -200,5 +219,19 @@
         <p class="footer__info">© 2022 Enver, All Rights Reserved</p>
       </footer>
     </div>
+
+    <script>
+      let openBtn = document.querySelector(".navbar__btn_burger");
+      let closeBtn = document.querySelector(".burger-menu__btn_close");
+      let burgerMenu = document.querySelector(".burger-menu");
+
+      openBtn.addEventListener("click", () => {
+        burgerMenu.style.display = "block";
+      });
+
+      closeBtn.addEventListener("click", () => {
+        burgerMenu.style.display = "none";
+      });
+    </script>
   </body>
 </html>
