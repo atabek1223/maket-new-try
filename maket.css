@@ -75,19 +75,20 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.novbar__logo {
+.navbar__logo {
   width: 10%;
 }
-.novbar__list {
+.navbar__list {
   display: flex;
   list-style-type: none;
   width: 30%;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
+  text-decoration: none;
 }
 
-.list_item > a {
+.list__item > a {
   text-decoration: none;
   color: beige;
 }
